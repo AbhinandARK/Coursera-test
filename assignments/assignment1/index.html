@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='DIApp'>
+
+<head>
+    <title>Dependency Injection in Javascript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h3>Angular Js - Dependency Injection in Javascript</h3>
+
+            <div ng-controller='DIController'>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="name" ng-blur="upper();">
+                        <span>{{satMessage()}}</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <button class="btn" ng-click="feedButton()">Switch</button><br>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <img ng-src="images/flower_{{imageBeing}}.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
